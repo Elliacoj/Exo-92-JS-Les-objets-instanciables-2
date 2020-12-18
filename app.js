@@ -22,15 +22,11 @@ let laurie = new Personne("larante", "Laurie", "21 ans", "femelle");
 let array = [john, steve, elodie, jerome, laurie];
 
 let classe = {
-    1: john,
-    2: steve,
-    3: elodie,
-    4: jerome,
-    5: laurie,
+    eleves: [john, steve, elodie, jerome, laurie],
 }
 
-for(let x = 0; x < array.length; x++) {
+for(let x = 0; x < classe.eleves.length; x++) {
     let div = document.createElement("div");
     document.body.append(div);
-    div.innerHTML = classe[x + 1].getIdentity();
+    div.innerHTML = classe.eleves[x].getIdentity();
 }
